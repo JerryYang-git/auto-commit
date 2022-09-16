@@ -7,7 +7,7 @@ on:
       - master
       
   schedule:
-  - cron: "0 */6 * * * " # 每六小时自动提交一次，cron时间表写法可参考:https://crontab.guru/
+  - cron: "0 */3 * * * " # 每六小时自动提交一次，cron时间表写法可参考:https://crontab.guru/
 
 jobs:
   auto_commit:
@@ -27,8 +27,8 @@ jobs:
           
       - name: Commit changes
         run: |
-          git config --local user.email "ryanhou24@gmail.com" # 你的Github账号绑定的邮箱
-          git config --local user.name "Dedicatus5457" # 你的Github username
+          git config --local user.email "2640216558@qq.com" # 你的Github账号绑定的邮箱
+          git config --local user.name "JerryYang-git" # 你的Github username
           git add -A
           
           arr[0]="chore(bot): auto commit"
